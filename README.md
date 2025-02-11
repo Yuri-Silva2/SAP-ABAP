@@ -429,6 +429,58 @@ Apesar de ser tradicionalmente centralizado, algumas empresas podem optar por um
 
 Na prática, **grandes empresas costumam ter uma abordagem híbrida**, onde algumas funções são centralizadas (como finanças), enquanto outras (como produção) podem ser descentralizadas para melhor eficiência operacional.
 
+**SAP ECC** → Componente central do ERP. <br>
+**SAP S/4 HANA** → É um acrônimo que significa "SAP Business Suite 4 SAP HANA" Dispositivo analítico de alto desempenho. <br>
+
+### Data Base:
+- **ECC**: Pode ser instalado em qualquer base de dados como DB2, oracle, IBM, informix, etc. <br>
+- **S/4 HANA**: Pode ser instalado apenas no banco de dados HANA. SAP HANA é um banco de dados multimodelo que armazena dados em sua memória em vez de mantê-los em disco. <br>
+
+### On-Premise vs Cloud: Entendendo as Diferenças
+
+Quando falamos sobre infraestrutura de TI e implantação de sistemas, existem duas abordagens principais: **On-Premise** e **Cloud**. Cada uma tem suas vantagens e desafios, dependendo das necessidades da empresa.
+
+### 1. On-Premise (No Local - "On-Prem")
+
+   No modelo on-premise, toda a infraestrutura de TI (servidores, bancos de dados, redes, armazenamento) está localizada fisicamente **dentro da empresa**. Isso significa que a organização é responsável por comprar, instalar, manter e atualizar os servidores e sistemas.
+
+#### Características do On-Premise:
+
+✅ **Controle Total** – A empresa gerencia toda a infraestrutura e tem acesso físico aos servidores. <br>
+✅ **Personalização** – Pode configurar servidores e sistemas conforme suas necessidades específicas. <br>
+✅ **Segurança e Compliance** – Em setores altamente regulamentados (bancos, saúde, governo), manter os dados localmente pode ser um requisito. <br>
+⚠ **Alto Custo Inicial** – É necessário investir em hardware, licenças, equipe de TI, segurança e manutenção. <br>
+⚠ **Escalabilidade Limitada** – A expansão da infraestrutura pode ser demorada e cara, exigindo novos servidores e mais espaço físico. <br>
+
+#### Exemplo:
+
+Uma empresa que roda **SAP ECC On-Premise** precisa ter servidores próprios e um time de TI para gerenciar tudo, desde a instalação até a atualização dos sistemas.
+
+### 2. Cloud (Nuvem)
+
+   No modelo cloud, a infraestrutura e os serviços de TI são fornecidos por um provedor externo (como **AWS, Microsoft Azure, Google Cloud Platform, SAP Cloud**). A empresa acessa os sistemas remotamente pela internet, sem precisar gerenciar a infraestrutura física.
+
+Características da Cloud:
+✅ **Menor Custo Inicial** – Não há necessidade de investir em servidores físicos; o pagamento é feito conforme o uso (modelo pay-as-you-go). <br>
+✅ **Escalabilidade Rápida** – Pode aumentar ou reduzir recursos instantaneamente de acordo com a demanda. <br>
+✅ **Acessibilidade** – Permite acesso remoto de qualquer lugar com internet, facilitando trabalho remoto e operações globais. <br>
+✅ **Manutenção e Segurança Gerenciadas** – O provedor de nuvem cuida de atualizações, backups e segurança. <br>
+⚠ **Dependência da Internet** – Uma conexão estável e rápida é essencial para garantir o desempenho do sistema. <br>
+⚠ **Menos Controle Direto** – A empresa depende das políticas do provedor de nuvem para atualizações, suporte e segurança. <br>
+
+Exemplo:
+Uma empresa que adota **SAP S/4HANA Cloud** usa a infraestrutura da SAP ou de um provedor terceirizado. Não precisa se preocupar com servidores físicos, pois tudo é gerenciado na nuvem.
+
+| **Critério**           | **On-Premise**              | **Cloud**                             |
+|------------------------|-----------------------------|---------------------------------------|
+| Infraestrutura         | Servidores próprios         | Servidores do provedor                |
+| Custo Inicial          | Alto                        | Baixo                                 |
+| Escalabilidade         | Lenta e cara                | Rápida e flexível                     |
+| Manutenção             | Responsabilidade da empresa | Responsabilidade do provedor          |
+| Segurança e Compliance | Controle total              | Depende das certificações do provedor |
+| Acesso Remoto          | Limitado                    | Fácil e global                        |
+
+
 
 
 
