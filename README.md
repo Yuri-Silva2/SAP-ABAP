@@ -460,7 +460,8 @@ Uma empresa que roda **SAP ECC On-Premise** precisa ter servidores próprios e u
 
    No modelo cloud, a infraestrutura e os serviços de TI são fornecidos por um provedor externo (como **AWS, Microsoft Azure, Google Cloud Platform, SAP Cloud**). A empresa acessa os sistemas remotamente pela internet, sem precisar gerenciar a infraestrutura física.
 
-Características da Cloud:
+#### Características da Cloud: 
+
 ✅ **Menor Custo Inicial** – Não há necessidade de investir em servidores físicos; o pagamento é feito conforme o uso (modelo pay-as-you-go). <br>
 ✅ **Escalabilidade Rápida** – Pode aumentar ou reduzir recursos instantaneamente de acordo com a demanda. <br>
 ✅ **Acessibilidade** – Permite acesso remoto de qualquer lugar com internet, facilitando trabalho remoto e operações globais. <br>
@@ -480,13 +481,67 @@ Uma empresa que adota **SAP S/4HANA Cloud** usa a infraestrutura da SAP ou de um
 | Segurança e Compliance | Controle total              | Depende das certificações do provedor |
 | Acesso Remoto          | Limitado                    | Fácil e global                        |
 
+----------------------------------------------------------------------------------------------------------------------
 
+### Code Pushdown Principe - Princípio do Pushdown de Código
 
+O **Code Pushdown Principle** é um conceito fundamental no desenvolvimento com **SAP HANA**, onde a lógica de processamento de dados é **empurrada para o banco de dados** em vez de ser processada na camada de aplicação. <br><br>
+Em outras palavras, em vez de buscar grandes volumes de dados para serem manipulados na aplicação (**ABAP Layer**), a lógica é executada diretamente no **SAP HANA (Database Layer)**, aproveitando seu alto desempenho **in-memory**.
 
+### Motivação e Benefícios
 
+Com a chegada do **SAP HANA**, o processamento de dados tornou-se muito mais rápido, pos ele opera **in-memory** e utiliza otimizações como **armazenamento em colunas** e **compressão de dados**. <br><br>
+Se o processamento for feito na aplicação (**ABAP Layer**), o banco de dados precisa enviar grandes quantidades de dados, gerando **gargalos de performance**. Mas, se o processamento ocorrer diretamente no banco (**HANA Layer**), apenas os **dados essenciais** são enviados para a aplicação, reduzindo **latência e carga na rede**.
 
+✅ **Redução do tempo de execução**
+✅ **Menos tráfego de dados entre banco e aplicação**
+✅ **Aproveitamento do poder do SAP HANA**
+✅ **Código mais eficiente e otimizado**
 
+## Exemplo Prático
 
+### 1. Sem Code Pushdown (Processamento na Aplicação - Lento)
 
+```SELECT * FROM sales INTO TABLE lt_sales.
+   LOOP AT lt_sales INTO ls_sales.
+     SUM ls_sales-amount INTO total_amount WHERE ls_sales-year = '2024'.
+   ENDLOOP.
+```
 
+▶ Aqui, **todos os dados da tabela** são carregados para a aplicação, e a soma é feita no **ABAP**, o que é ineficiente.
 
+______________________________________________________________________________________________________________________________
+
+### 2. Com Code Pushdown (Processamento no Banco – Rápido)
+
+``` 
+SELECT SUM(amount) INTO total_amoun
+  FROM sales
+```
+
+▶ Neste caso, **a soma ocorre diretamente no banco de dados**, retornando **apenas um único valor**, reduzindo drasticamente o volume de dados transferidos.
+
+______________________________________________________________________________________________________________________________             
+
+### Técnicas de Code Pushdown
+
+No SAP HANA, podemos usar várias abordagens para aplicar o princípio do **pushdown**:
+
+#### 1. SQL Avançado
+
+- Utilizar operações de agregação no **SELECT** (SUM, COUNT, AVG, etc.)
+- Usar **JOINS** em vez de carregar tabelas separadamente
+
+#### 2. CDS Views (Core Data Services)
+
+- Criar **CDS Views** para pré-processamento de dados no banco
+- Melhor integração com S/4HANA e Fiori
+
+#### 3. AMDP (ABAP Managed Database Procedures)
+
+- Escrever **Stored Procedures em SQLScript** dentro do ABAP
+- Executar cálculos complexos diretamente no HANA
+
+#### 4. Table Functions
+
+- Criar **funções no banco** que retornam tabelas otimizadas
