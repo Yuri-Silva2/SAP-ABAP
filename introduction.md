@@ -552,7 +552,7 @@ No SAP HANA, podemos usar várias abordagens para aplicar o princípio do **push
 
 ![img_5.png](images/img_5.png)
 
-RICEFW é um acrônimo usado para categorizar diferentes tipos de objetos customizados dentro de um projeto SAP. Ele representa os seguintes componentes:
+**RICEFW** é um acrônimo usado para categorizar diferentes tipos de objetos customizados dentro de um projeto SAP. Ele representa os seguintes componentes:
 
 - **R - Reports** (Relatórios): Relatórios customizados criados para extrair e apresentar dados específicos, normalmente utilizando **ABAP ALV** ou **SmartForms**. <br><br>
 - **I - Interfaces**: Integrações entre o SAP e sistemas externos, como troca de dados via **IDocs**, **Web Services**, **RFCs** ou **APIs REST/SOAP**. <br><br>
