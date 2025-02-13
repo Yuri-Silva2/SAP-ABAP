@@ -3,9 +3,6 @@
 
 <br>
 
-📌 [Introdução](introduction.md)  
-⚙️ [Instalação](docs/instalacao.md)  
-🔧 [Configuração](docs/configuracao.md)  
-📜 [Guia de Uso](docs/guia_de_uso.md)  
-❓ [FAQ](docs/faq.md)  
-🤝 [Contribuindo](docs/contribuindo.md)  
+<p align="center">
+	<a href="introduction.md">📌 Introdução</a> •
+</p>
