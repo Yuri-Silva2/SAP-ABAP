@@ -545,3 +545,9 @@ No SAP HANA, podemos usar várias abordagens para aplicar o princípio do **push
 #### 4. Table Functions
 
 - Criar **funções no banco** que retornam tabelas otimizadas
+
+------------------------------------------------------------------------------------
+
+## O que é ABAP?
+
+![img_5.png](images/img_5.png)
