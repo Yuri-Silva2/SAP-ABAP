@@ -3,6 +3,8 @@
 <details>
   <summary>📌 ABAP Básico</summary>
 
+<br>
+
 1. Entendendo a plataforma ABAP.
 2. Dicionário de dados ABAP (Table, Views, Data elements and Domains, Search help, etc.)
 3. Aprenda a sintaxe ABAP (Write command, Control statement, Case statements, Loop, Do Endo, Subroutines, Modularization, etc.)
@@ -17,6 +19,8 @@
 
 <details>
   <summary>📌 ABAP Avançado</summary>
+
+<br>
 
 1. Object Oriented Programming.
 2. Enhancement (to add the won functionality in standard application.)
