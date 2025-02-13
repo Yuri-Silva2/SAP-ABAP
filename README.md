@@ -374,13 +374,13 @@ O **ABAP** é a principal linguagem de programação do SAP, usada para criar:
 
 **Exemplo:** Criar um fluxo automatizado de aprovações conectado ao SAP através do SAP BTP.
 
-![img.png](img.png)
+![img.png](images/img.png)
 
 ERP significa planejamento de recursos empresariais. Os sistemas ERP são o tipo de ferramenta de software usada para gerenciar os dados de uma empresa.
 
-![img_1.png](img_1.png)
+![img_1.png](images/img_1.png)
 
-![img_2.png](img_2.png)
+![img_2.png](images/img_2.png)
 
 ### Tradução:
 
@@ -390,7 +390,7 @@ Inventory = Inventário; <br>
 Production Planning = Planejamento de Produção; <br>
 Purchasing = Comprando/Aquisição.
 
-![img_3.png](img_3.png)
+![img_3.png](images/img_3.png)
 
 ### Tradução:
 
@@ -407,7 +407,7 @@ Project Management = Gerenciamento de Projetos; <br>
 Human Resources = Recursos Humanos; <br>
 Analytics & Reporting = Análises & Relatórios;
 
-![img_4.png](img_4.png)
+![img_4.png](images/img_4.png)
 
 O **SAP S/4HANA** pode ser configurado tanto em um modelo **centralizado** quanto **descentralizado**, dependendo da necessidade da empresa.
 
