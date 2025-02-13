@@ -551,3 +551,14 @@ No SAP HANA, podemos usar várias abordagens para aplicar o princípio do **push
 ## O que é ABAP?
 
 ![img_5.png](images/img_5.png)
+
+RICEFW é um acrônimo usado para categorizar diferentes tipos de objetos customizados dentro de um projeto SAP. Ele representa os seguintes componentes:
+
+- **R - Reports** (Relatórios): Relatórios customizados criados para extrair e apresentar dados específicos, normalmente utilizando **ABAP ALV** ou **SmartForms**. <br><br>
+- **I - Interfaces**: Integrações entre o SAP e sistemas externos, como troca de dados via **IDocs**, **Web Services**, **RFCs** ou **APIs REST/SOAP**. <br><br>
+- **C - Conversions** (Conversões de Dados): Processos de migração de dados de sistemas legados para o SAP, utilizando **LTMC, BAPIs, LSMW** ou **programas ABAP customizados**. <br><br>
+- **E - Enhancements** (Melhorias): Extensões do SAP padrão para atender necessidades específicas da empresa, como **User Exits, BAdLs e Enhancements Spots**. <br><br>
+- **F - Forms** (Formulários): Impressão e exibição de documentos no SAP, utilizando **SmartForms**, **SAPScript**, ou **Adobe Forms**. <br><br>
+- **W - Workflows**: Automação de processos no SAP, garantindo a execução de tarefas em sequência, usando o **SAP Business Workflow**. <br><br>
+
+Em projetos SAP, o desenvolvimento de RICEFWs é comum para adaptar o ERP às necessidades específicas do cliente.
